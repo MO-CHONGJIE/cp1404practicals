@@ -4,15 +4,32 @@ Broken program to determine score status
 """
 
 
-score = float(input("Enter score: "))
-if score < 0 or score > 100:
-    print("Invalid score")
+import random
 
-elif score > 90:
-    print("excellent")
+def main():
+    score = get_score()
+    print_result(score)
 
-elif score >= 50:
-    print("Passable")
+    random_score = random.randint(0, 100)
+    print(f"random score is {random_score}")
+    print_result(random_score)
 
-else:
-    print("Bad")
+def print_result(score):
+    if score < 0 or score > 100:
+        print("Invalid score")
+
+    elif score > 90:
+        print("excellent")
+
+    elif score >= 50:
+        print("Passable")
+
+    else:
+        print("Bad")
+
+
+def get_score():
+    score = float(input("Enter score: "))
+    return score
+
+main()
