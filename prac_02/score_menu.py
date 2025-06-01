@@ -4,7 +4,7 @@ EXCELLENT_SCORE = 90
 PASSABLE_SCORE = 50
 
 def main():
-    score = 0
+    score = LOWEST_SCORE
     choice = ''
     while choice != 'Q':
         print("(G)et a valid score")
@@ -17,13 +17,13 @@ def main():
             score = get_valid_score()
 
         elif choice == 'P':
-            if score == 0:
+            if score == LOWEST_SCORE:
                 print("Please get a score first!")
             else:
                 print_result(score)
 
         elif choice == 'S':
-            if score == 0:
+            if score == LOWEST_SCORE:
                 print("Please get a score first!")
             else:
                 show_stars(score)
