@@ -30,10 +30,15 @@ def count_championships(data):
 
 def get_countries(data):
     """Get the countries of the champions in alphabetical order"""
+    countries = set()
+    for record in data[1:]:
+        if len(record) > 1:
+            country = record[1].strip()
+            countries.add(country)
+    return sorted(countries)
 
 
 def display_results(champ_count, sorted_countries):
     """Display the processed results"""
-
 
 main()
