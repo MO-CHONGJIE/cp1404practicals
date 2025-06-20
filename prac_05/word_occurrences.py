@@ -1,7 +1,7 @@
 """
 Word Occurrences
 Estimate: 25 minutes
-Actual:   minutes
+Actual:   35 minutes
 """
 
 text = input("Text: ").lower()
@@ -15,5 +15,9 @@ for word in words:
     else:
         word_counts[word] = 1
 
+max_length = max(len(word) for word in word_counts)
+
+for word in sorted(word_counts):
+    print(f"{word:{max_length}} : {word_counts[word]}")
 
 
