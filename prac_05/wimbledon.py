@@ -20,6 +20,12 @@ def read_file_data(filename):
 
 def count_championships(data):
     """Count the number of times each champion has won"""
+    champ_count = {}
+    for record in data[1:]:
+        if len(record) > 2:
+            champion = record[2].strip()
+            champ_count[champion] = champ_count.get(champion, 0) + 1
+    return champ_count
 
 
 def get_countries(data):
@@ -28,7 +34,6 @@ def get_countries(data):
 
 def display_results(champ_count, sorted_countries):
     """Display the processed results"""
-
 
 
 main()
