@@ -40,5 +40,11 @@ def get_countries(data):
 
 def display_results(champ_count, sorted_countries):
     """Display the processed results"""
+    print("Wimbledon Champions: ")
+    for champion, count in champ_count.items():
+        print(f"{champion}: {count}")
+
+    print(f"These {len(champ_count)} countries have won Wimbledon: ")
+    print(", ".join(sorted_countries))
 
 main()
