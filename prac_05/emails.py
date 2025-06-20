@@ -1,7 +1,7 @@
 """
 emails.py
 Estimate: 40 minutes
-Actual:  minutes
+Actual:  50 minutes
 
 """
 
