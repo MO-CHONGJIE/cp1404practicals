@@ -7,6 +7,15 @@ def main():
 
 def read_file_data(filename):
     """Read file and return data as a list"""
+    data = []
+    try:
+        with open(filename, "r", encoding="utf-8-sig") as in_file:
+            for line in in_file:
+                if line.strip():
+                    data.append(line.strip().split(','))
+    except FileNotFoundError:
+        print(f"Error: File {filename} not found")
+    return data
 
 
 def count_championships(data):
@@ -17,9 +26,9 @@ def get_countries(data):
     """Get the countries of the champions in alphabetical order"""
 
 
-
 def display_results(champ_count, sorted_countries):
     """Display the processed results"""
+
 
 
 main()
