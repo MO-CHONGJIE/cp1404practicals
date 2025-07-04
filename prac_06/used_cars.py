@@ -10,5 +10,5 @@ from prac_06.car import Car
 def main():
     """Demo test code to show how to use car class."""
     limo = Car(100)
-
+    limo.add_fuel(20)
 main()
