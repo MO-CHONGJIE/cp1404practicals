@@ -1,7 +1,7 @@
 """
 guitar_text
-Estimate:  minutes
-Actual:    minutes
+Estimate: 15 minutes
+Actual: 15 minutes
 """
 
 from prac_06.guitar import Guitar
