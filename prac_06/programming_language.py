@@ -1,7 +1,7 @@
 """
 ProgrammingLanguage
-Estimate:  20 minutes
-Actual:   minutes
+Estimate:  10 minutes
+Actual:   15 minutes
 """
 
 class ProgrammingLanguage:
