@@ -12,4 +12,7 @@ def main():
 
     print(f"{gibson.name} get_age() - Expected 100. Got {gibson.get_age()}")
     print(f"{another.name} get_age() - Expected 9. Got {another.get_age()}")
+    print(f"{gibson.name} is_vintage() - Expected True. Got {gibson.is_vintage()}")
+    print(f"{another.name} is_vintage() - Expected False. Got {another.is_vintage()}")
+
 main()
