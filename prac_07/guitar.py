@@ -1,7 +1,7 @@
 """
 guitar
-Estimate: 20 minutes
-Actual: 15 minutes
+Estimate:  minutes
+Actual:  minutes
 """
 
 CURRENT_YEAR = 2022

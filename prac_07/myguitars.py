@@ -3,7 +3,7 @@ from guitar import Guitar
 
 
 def main():
-    """Load from a CSV file and return a list ."""
+    """Load from a CSV file and return a list"""
     guitars = []
     in_file = open('guitars.csv', 'r')
     for line in in_file:
