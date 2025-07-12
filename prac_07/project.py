@@ -19,3 +19,6 @@ class Project:
         return (f"{self.name}, start: {self.start_date.strftime('%d/%m/%Y')},"
                 f" priority {self.priority}, estimate: ${self.cost_estimate:.2f},"
                 f" completion: {self.completion_percentage}%")
+
+    def is_complete(self):
+        return self.completion_percentage >= 100
