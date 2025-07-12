@@ -15,6 +15,7 @@ def main():
         guitars.append(guitar)
     in_file.close()
 
+# Regular display
     for guitar in guitars:
         print(guitar)
 
@@ -23,5 +24,17 @@ def main():
     print("\nSorted by year:")
     for guitar in guitars:
         print(guitar)
+
+    name = input("\nName: ")
+    while name != "":
+        try:
+            year = int(input("Year: "))
+            cost = float(input("Cost: $"))
+            new_guitar = Guitar(name, year, cost)
+            guitars.append(new_guitar)
+            print(f"{new_guitar} added.")
+        except ValueError:
+            print("Invalid input, enter again.")
+        name = input("Name: ")
 
 main()
