@@ -37,4 +37,13 @@ def main():
             print("Invalid input, enter again.")
         name = input("Name: ")
 
+    print("\nGuitars list:")
+    for i, guitar in enumerate(guitars, 1):
+        print(f"Guitar {i}: {guitar}")
+
+    guitars.sort()
+    with open("guitars.csv", "w") as out_file:
+        for guitar in guitars:
+            print(f"{guitar.name},{guitar.year},{guitar.cost}", file=out_file)
+
 main()
