@@ -65,7 +65,13 @@ def load_projects(filename):
         next(file)
         for line in file:
             parts = line.strip().split(',')
-            projects.append(Project)
+            name = parts[0]
+            start_date = parts[1]
+            priority = int(parts[2])
+            cost_estimate = float(parts[3])
+            completion_percentage = int(parts[4])
+            project = Project(name, start_date, priority, cost_estimate, completion_percentage)
+            projects.append(project)
     return projects
 
 def save_projects(projects, filename):
