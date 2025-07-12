@@ -17,4 +17,11 @@ def main():
 
     for guitar in guitars:
         print(guitar)
+
+# Display guitars from oldest to newest
+    guitars.sort()
+    print("\nSorted by year:")
+    for guitar in guitars:
+        print(guitar)
+
 main()
