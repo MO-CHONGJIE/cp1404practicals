@@ -10,6 +10,11 @@ from datetime import datetime
 FILENAME = "projects.txt"
 
 
+def main():
+    print("Welcome to Pythonic Project Management")
+    projects = load_projects(FILENAME)
+    print(f"Loaded {len(projects)} projects from {FILENAME}")
+
 def load_projects(filename):
     projects = []
     with open(filename, "r") as file:

@@ -1,6 +1,6 @@
 """
 project
-Estimate: 25 minutes
+Estimate: 30 minutes
 Actual:  minutes
 """
 
