@@ -18,3 +18,15 @@ def load_projects(filename):
             parts = line.strip().split(',')
             projects.append(Project)
     return projects
+
+def display_projects(projects):
+    """Display project is incomplete or completed, sorted by priority."""
+    incomplete = sorted([p for p in projects if not p.is_complete()])
+    complete = sorted([p for p in projects if p.is_complete()])
+
+    print("Incomplete projects:")
+    for project  in incomplete:
+        print(f"  {project }")
+    print("Completed projects:")
+    for project  in complete:
+        print(f"  {project }")
