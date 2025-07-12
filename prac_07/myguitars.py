@@ -14,3 +14,7 @@ def main():
         guitar = Guitar(name, year, cost)
         guitars.append(guitar)
     in_file.close()
+
+    for guitar in guitars:
+        print(guitar)
+main()
