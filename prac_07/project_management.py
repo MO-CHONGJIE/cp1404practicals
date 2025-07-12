@@ -59,9 +59,6 @@ def main():
         print("Invalid option")
 
 
-
-
-
 def load_projects(filename):
     projects = []
     with open(filename, "r") as file:
@@ -71,10 +68,18 @@ def load_projects(filename):
             projects.append(Project)
     return projects
 
+def save_projects(projects, filename):
+    with open(filename, "w") as file:
+        file.write("Name, Start Date, Priority, Cost Estimate, Completion Percentage\n")
+        for project in projects:
+            file.write(f"{project.name}, {project.start_date.strftime('%d/%m/%Y')}"
+                       f", {project.priority}, {project.cost_estimate}"
+                       f", {project.completion_percentage}\n")
+
 def display_projects(projects):
     """Display project is incomplete or completed, sorted by priority."""
-    incomplete = sorted([p for p in projects if not p.is_complete()])
-    complete = sorted([p for p in projects if p.is_complete()])
+    incomplete = sorted([project for project in projects if not project.is_complete()])
+    complete = sorted([project for project in projects if project.is_complete()])
 
     print("Incomplete projects:")
     for project  in incomplete:
