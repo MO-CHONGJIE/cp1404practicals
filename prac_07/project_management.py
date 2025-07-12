@@ -80,10 +80,21 @@ def display_projects(projects):
     """Display project is incomplete or completed, sorted by priority."""
     incomplete = sorted([project for project in projects if not project.is_complete()])
     complete = sorted([project for project in projects if project.is_complete()])
-
     print("Incomplete projects:")
     for project  in incomplete:
         print(f"  {project }")
     print("Completed projects:")
     for project  in complete:
         print(f"  {project }")
+
+def get_start_date(project):
+    return project.start_date
+
+def filter_projects(projects, after_date):
+    filtered = []
+    for project in projects:
+        if project.start_date > after_date:
+            filtered.append(project)
+    filtered.sort(key = get_start_date)
+    for project in filtered:
+        print(project)
