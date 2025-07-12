@@ -114,3 +114,24 @@ def filter_projects(projects, after_date):
     for project in filtered:
         print(project)
 
+def add_project():
+    print("Let's add a new project")
+    name = input("Name: ")
+    date_str = input("Start date (dd/mm/yyyy): ")
+    start_date = datetime.strptime(date_str, "%d/%m/%Y")
+    priority = int(input("Priority: "))
+    cost = float(input("Cost estimate: $"))
+    percent = int(input("Percent complete: "))
+    return Project(name, start_date, priority, cost, percent)
+
+def update_project(project):
+    print(project)
+    new_percent = input("New Percentage: ")
+    if new_percent:
+        project.completion_percentage = int(new_percent)
+    new_priority = input("New Priority: ")
+    if new_priority:
+        project.priority = int(new_priority)
+
+
+main()
