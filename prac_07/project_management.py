@@ -15,6 +15,22 @@ def main():
     projects = load_projects(FILENAME)
     print(f"Loaded {len(projects)} projects from {FILENAME}")
 
+    print("- (L)oad projects")
+    print("- (S)ave projects")
+    print("- (D)isplay projects")
+    print("- (F)ilter projects by date")
+    print("- (A)dd new project")
+    print("- (U)pdate project")
+    print("- (Q)uit")
+
+    choice = input(">>> ").lower()
+
+
+
+
+
+
+
 def load_projects(filename):
     projects = []
     with open(filename, "r") as file:
