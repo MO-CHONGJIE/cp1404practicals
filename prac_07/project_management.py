@@ -25,7 +25,38 @@ def main():
 
     choice = input(">>> ").lower()
 
+    if choice == "l":
+        filename = input("Filename: ")
+        projects = load_projects(filename)
+        print(f"Loaded {len(projects)} projects from {filename}")
 
+    elif choice == "s":
+        filename = input("Filename: ")
+        save_projects(projects, filename)
+        print(f"Projects saved to {filename}")
+
+    elif choice == "d":
+        display_projects(projects)
+
+    elif choice == "f":
+        date_str = input("Show projects that start after (dd/mm/yyyy): ")
+        date = datetime.strptime(date_str, "%d/%m/%Y").date()
+        filter_projects(projects, date)
+
+    elif choice == "a":
+        new_project = add_project()
+        projects.append(new_project)
+
+    elif choice == "u":
+        for i, project in enumerate(projects):
+            print(f"{i} {project}")
+        index = int(input("Project choice: "))
+        update_project(projects[index])
+
+    elif choice == "q":
+        print("Thank you for using the project manager!")
+    else:
+        print("Invalid option")
 
 
 
