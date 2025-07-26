@@ -6,7 +6,7 @@ def main():
 
     print(f"Total fare is: {taxi.get_fare():.2f}")
 
-# get a result rounded
+    # get a result rounded
     assert round(taxi.get_fare(), 1) == 48.80, "Calculation is not correct"
 
 main()
