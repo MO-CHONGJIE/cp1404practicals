@@ -55,4 +55,11 @@ def main():
     print("Taxis are now:")
     display_taxis(taxis)
 
+
+def display_taxis(taxis):
+    """Display taxis in specified format"""
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
+
+
 main()
