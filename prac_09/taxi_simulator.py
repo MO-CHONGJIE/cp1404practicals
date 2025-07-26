@@ -22,4 +22,37 @@ def main():
     print(MENU)
     menu_choice = input(">>> ").lower()
 
+    while menu_choice != "q":
+        if menu_choice == "c":
+            print("Taxis available:")
+            display_taxis(taxis)
+            try:
+                taxi_choice = int(input("Choose taxi: "))
+                current_taxi = taxis[taxi_choice]
+            except (ValueError, IndexError):
+                print("Invalid taxi choice")
+        elif menu_choice == "d":
+            if current_taxi:
+                current_taxi.start_fare()
+                try:
+                    drive_distance = float(input("Drive how far? "))
+                    current_taxi.drive(drive_distance)
+                    taxi_cost = current_taxi.get_fare()
+                    print(f"Your {current_taxi.name} trip cost you ${taxi_cost:.2f}")
+                    total_bill += taxi_cost
+                except ValueError:
+                    print("Invalid distance")
+            else:
+                print("You need to choose a taxi before you can drive")
+        else:
+            print("Invalid menu choice")
+
+        print(f"Bill to date: ${total_bill:.2f}")
+        print(MENU)
+        menu_choice = input(">>> ").lower()
+
+    print(f"Total trip cost: ${total_bill:.2f}")
+    print("Taxis are now:")
+    display_taxis(taxis)
+
 main()
