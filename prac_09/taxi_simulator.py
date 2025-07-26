@@ -1,7 +1,7 @@
 """
 Taxi_simulator
 Estimate: 1.5h
-Actual: 2h
+Actual: 1.8h
 """
 
 from taxi import Taxi
